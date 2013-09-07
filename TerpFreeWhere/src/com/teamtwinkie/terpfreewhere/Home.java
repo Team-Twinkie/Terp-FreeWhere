@@ -2,7 +2,7 @@ package com.teamtwinkie.terpfreewhere;
 
 import android.os.Bundle;
 import 
-//comenting
+
 android.app.Activity;
 import android.view.Menu;
 import 
