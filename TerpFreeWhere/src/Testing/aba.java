@@ -6,7 +6,7 @@ public class aba {
 	 * @param args
 	 */
 	public static void main(String[] args) {
- System.out.print("hixfdg");
+ System.out.print("h22");
 	}
 
 }
