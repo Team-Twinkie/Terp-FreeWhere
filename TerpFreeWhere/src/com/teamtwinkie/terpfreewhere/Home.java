@@ -16,9 +16,9 @@ android.widget.Button;
 public class Home extends Activity implements OnClickListener {
 	Button freeFoodButton;
 	Button freeSwagButton; 
-	Button freeEventsButton ;
-	Button allFreeThingsButton ;
-	Button organizationButton ;
+	Button freeEventsButton;
+	Button allFreeThingsButton;
+	Button organizationButton;
 
 
 	@Override
