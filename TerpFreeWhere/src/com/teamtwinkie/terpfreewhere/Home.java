@@ -22,8 +22,6 @@ public class Home extends Activity implements OnClickListener {
 
 
 	@Override
-
-
 	protected void onCreate(Bundle savedInstanceState) {
 
 		freeFoodButton = (Button) findViewById(R.id.button1);
