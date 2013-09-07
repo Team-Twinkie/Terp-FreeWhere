@@ -13,54 +13,98 @@ import
 
 android.widget.Button;
 
-public class Home extends Activity implements OnClickListener {
+public class Home extends Activity implements 
+
+OnClickListener {
 	Button freeFoodButton;
 	Button freeSwagButton; 
-	Button freeEventsButton;
-	Button allFreeThingsButton;
-	Button organizationButton;
+	Button freeEventsButton ;
+	Button allFreeThingsButton ;
+	
 
+Button organizationButton ;
+	
+	
+protected void onCreate(Bundle savedInstanceState) {
+		
 
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
+freeFoodButton = (Button) findViewById(R.id.button1);
+		
 
-		freeFoodButton = (Button) findViewById(R.id.button1);
-		freeSwagButton = (Button) findViewById(R.id.button2);
-		freeEventsButton = (Button) findViewById(R.id.button3);
-		allFreeThingsButton = (Button) findViewById(R.id.button4);
-		organizationButton = (Button) findViewById(R.id.button5);
-		freeFoodButton.setOnClickListener(this);
-		freeSwagButton.setOnClickListener(this);
-		freeEventsButton.setOnClickListener(this);
-		allFreeThingsButton.setOnClickListener(this);
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_home);
+freeSwagButton = (Button) findViewById(R.id.button2);
+		
+
+freeEventsButton = (Button) findViewById(R.id.button3);
+		
+
+allFreeThingsButton = (Button) findViewById(R.id.button4);
+		
+
+organizationButton = (Button) findViewById(R.id.button5);
+		
+
+freeFoodButton.setOnClickListener(this);
+		
+
+freeSwagButton.setOnClickListener(this);
+		
+
+freeEventsButton.setOnClickListener(this);
+		
+
+allFreeThingsButton.setOnClickListener(this);
+		
+
+super.onCreate(savedInstanceState);
+		setContentView
+
+(R.layout.activity_home);
 	}
-
+	
 
 	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
+	public 
+
+boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.home, menu);
+		
+
+getMenuInflater().inflate(R.menu.home, menu);
 		//Comment here
-		return true;
+	
+
+	return true;
 	}
 
 	@Override
-	public void onClick(View v) {
+	public void onClick
+
+(View v) {
 		switch(v.getId()){
-		case R.id.button1:
+		case 
+
+R.id.button1:
 			//switch to the menu activity
-		case R.id.button2:
+		
+
+case R.id.button2:
 			//switch to the menu activity
-		case R.id.button3:
+	
+
+	case R.id.button3:
 			// switch to the menu activity
 		case R.id.button4:
-			//switch to the menu activity
-		case R.id.button5:
-			//switch to the orginaztion submission activity
-		}
+			
 
+//switch to the menu activity
+		case R.id.button5:
+		
+
+	//switch to the orginaztion submission activity
+		}
+	
+
+	
 	}
 
 }
