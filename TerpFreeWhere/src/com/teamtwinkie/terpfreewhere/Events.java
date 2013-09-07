@@ -21,7 +21,7 @@ public class Events {
 		this.how = howIn;		
 		this.what = whatIn;
 	}
-
+	
 	/*
 	 * Get the date and time for the events.
 	 */
