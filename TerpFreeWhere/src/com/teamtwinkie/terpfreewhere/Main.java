@@ -17,7 +17,7 @@ public class Main {
 	
 	private Map<type, PriorityQueue<Entry>> categories;
 	
-	private TreeSet<Entry> all;
+	private PriorityQueue<Entry> all;
 	
 	public Main(){
 		
@@ -29,7 +29,7 @@ public class Main {
 		swag = new PriorityQueue<Entry>(0, comparator);
 		activities = new PriorityQueue<Entry>(0, comparator);
 				
-		all = new TreeSet<Entry>(comparator);
+		all = new PriorityQueue<Entry>(0,comparator);
 		
 		categories.put(type.FOOD, food);
 		categories.put(type.SWAG, swag);
