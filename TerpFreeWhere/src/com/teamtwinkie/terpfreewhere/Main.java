@@ -1,5 +1,7 @@
 package com.teamtwinkie.terpfreewhere;
 
+import java.util.Calendar;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.PriorityQueue;
@@ -20,6 +22,12 @@ public class Main {
 	public Main(){
 		
 		categories = new HashMap<type,PriorityQueue<Entry>>();
+		
+		food = new PriorityQueue<Entry>(10, new DateComparator());
+		swag = new PriorityQueue<Entry>(10, new DateComparator());
+		activities = new PriorityQueue<Entry>(10, new DateComparator());
+		
+		
 		categories.put(type.FOOD, food);
 		categories.put(type.SWAG, swag);
 		categories.put(type.EVENTS, activities);

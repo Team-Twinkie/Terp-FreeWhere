@@ -25,14 +25,14 @@ public class Entry {
 	/*
 	 * Get the date and time for the entry.
 	 */
-	public Calendar getDate() {
+	public Calendar getWhen() {
 		return when;
 	}
 
 	/*
 	 * Set the date and time for the entry.
 	 */
-	public void setDate(Calendar when) {
+	public void setWhen(Calendar when) {
 		this.when = when;
 	}
 
