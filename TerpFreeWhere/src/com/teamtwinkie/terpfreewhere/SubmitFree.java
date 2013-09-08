@@ -1,19 +1,22 @@
 package com.teamtwinkie.terpfreewhere;
 
-import android.R;
+
 import android.os.Bundle;
 import android.app.Activity;
-import android.view.Menu;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+
 
 public class SubmitFree extends Activity {
 	
 	EditText orgName;
 	EditText catOfFree;
 	EditText whatsFree;
-	EditText email;
 	EditText date;
 	EditText smallDescription;
+	EditText location;
+	Button submit;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -22,16 +25,29 @@ public class SubmitFree extends Activity {
 		orgName = (EditText)findViewById(R.id.editText1);
 		catOfFree = (EditText)findViewById(R.id.editText2);
 		whatsFree = (EditText)findViewById(R.id.editText3);
-		email = (EditText)findViewById(R.id.editText4);
+		location = (EditText)findViewById(R.id.editText4);
 		date = (EditText)findViewById(R.id.editText5);
 		smallDescription = (EditText)findViewById(R.id.editText6);
+		submit = (Button)findViewById(R.id.submitFreeButton);
 	}
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.submit_free, menu);
-		return true;
+	
+	public void onClick(View v){
+		String orgName1 = orgName.getText().toString();
+		String catOfFree1 = catOfFree.getText().toString();
+		String whatsFree1 = whatsFree.getText().toString();
+		String location1 = location.getText().toString();
+		String date1 = date.getText().toString();
+		String smallDescription1 = smallDescription.getText().toString();
+		if(v.getId() == R.id.submitFreeButton){
+			
+			// put method here thats takes in the entry information
+		Main mainObject = new Main();
+		mainObject.makeEntry(orgName1, catOfFree1, whatsFree1, date1, smallDescription1, location1);
+			
+			
+			
+		}
 	}
+	
 
 }

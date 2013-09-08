@@ -60,7 +60,93 @@ public class Main {
 	/*
 	 * Generic Add to all
 	 */
-	void addFood(Entry e1){
+	void addAll(Entry e1){
 		all.add(e1);
 	}
+	
+	public void makeEntry(String orgName, String catOfFree,String what, String date, 
+			String description, String location){
+		
+		boolean isFood = false;
+		boolean isSwag = false;
+		boolean isEvents = false;
+		
+		Food newF=null;
+		Swag newS=null;
+		Events newE=null;
+		
+		if(catOfFree.contains("food")){
+			newF = new Food(parseDate(date), location, orgName, description, what);
+			food.add(newF);
+			isFood = true;
+		}
+		if(catOfFree.contains("swag")){
+			newS = new Swag(parseDate(date), location, orgName, description, what);
+			swag.add(newS);
+			isSwag = true;
+		}if(catOfFree.contains("activities")){
+			newE = new Events(parseDate(date), location, orgName, description, what);
+			activities.add(newE);
+			isEvents = true;
+		}		
+		if(isFood==true && isSwag==true && isEvents==true){
+			all.add(newF);
+			all.add(newS);
+			all.add(newE);
+		}
+	}
+	
+	private Calendar parseDate(String date){
+		String characters = "";
+		int pos=0;
+		
+		// gets the month
+		for(int i = 0;i < date.length();i++){
+			if(date.charAt(i)=='/'){
+				pos = i;
+				characters = date.substring(0, pos);
+				break;
+			}
+		}
+		int month = Integer.parseInt(characters);
+		
+		// gets the day
+		for(int i = pos+1;i < date.length();i++){
+			if(date.charAt(i)=='/'){
+				pos = i;
+				characters = date.substring(pos+1, i-1);
+				break;
+			}
+		}
+		int day = Integer.parseInt(characters);
+		
+		// gets the year
+		for(int i = pos+1;i < date.length();i++){
+			if(date.charAt(i)==','){
+				pos = i;
+				characters = date.substring(pos+1, i-1);
+				break;
+			}
+		}
+		int year = Integer.parseInt("20"+characters);
+		
+		// gets the hour
+		for(int i = pos+1;i < date.length();i++){
+			if(date.charAt(i)==':'){
+				pos = i;
+				characters = date.substring(pos+1, i-1);
+				break;
+			}
+		}
+		int hour = Integer.parseInt(characters);
+		
+		// gets the minutes
+		characters = date.substring(pos+1, date.length()-1);
+		int min = Integer.parseInt(characters);
+		
+		Calendar cal = Calendar.getInstance();
+		cal.set(year, month, day, hour, min);
+		return cal;
+	}
+	
 }
