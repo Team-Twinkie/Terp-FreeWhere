@@ -24,6 +24,8 @@
         </activity>
         <activity android:name="com.teamtwinkie.terpfreewhere.SubmitFree"></activity>
         <activity android:name="com.teamtwinkie.terpfreewhere.Menu"></activity>
+        <activity android:name="com.teamtwinkie.terpfreewhere.AndroidListViewActivity"></activity>
+        <activity android:name="com.teamtwinkie.terpfreewhere.SingleListItem"></activity>
     </application>
 
 </manifest>
